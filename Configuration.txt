@@ -1,0 +1,11 @@
+To create a module or project that contains both an EJB and a JPA Entity we should add an "EJB:Java Enterprise Beans" and a "JavaEE Persistence” framework to the existing module.
+In both the frameworks, the "Download" option under "Libraries" should be chosen. 
+This way, the necessary external libraries (JPA 2.0 and EJB 3.2) will be download automatically and will be included into the classpath.
+
+When adding a "JavaEE Persistence" framework, we need also to specify a Persistence provider. A Persistence Provider does the actual implementation of the JPA.
+Some Persistence Providers are: Hibernate, EclipseLink,OpenGL, etc. Hibernate is the most popular one and is the one recommended to be used.
+
+Another point to keep in mind when using JPAs is the need to set up a Persistence Unit, which basically consists of one or more Entity (JPA) beans along with the properties of the Persistence Provider that would be applied to those beans.
+The Persistence units are defined in the persistence.xml file found under the META_INF folder (created by the JavaEE Persistence framework).
+
+
